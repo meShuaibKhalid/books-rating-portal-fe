@@ -7,9 +7,9 @@ loginForm.addEventListener("submit", (evt) => {
   const fd = new FormData(evt.target);
   const data = getUserData(Object.fromEntries(fd.entries()));
   Login(data).then(
-    (data) => {
+    (res) => {
       evt.target.reset();
-      localStorage.setItem("user", JSON.stringify(data));
+      localStorage.setItem("user", JSON.stringify(res));
       window.location.href = "index.html";
     },
     (error) => {

@@ -162,63 +162,76 @@
   heroCarouselItems.forEach((item, index) => {
     index === 0
       ? (heroCarouselIndicators.innerHTML +=
-          "<li data-bs-target='#heroCarousel' data-bs-slide-to='" +
-          index +
-          "' class='active'></li>")
+        "<li data-bs-target='#heroCarousel' data-bs-slide-to='" +
+        index +
+        "' class='active'></li>")
       : (heroCarouselIndicators.innerHTML +=
-          "<li data-bs-target='#heroCarousel' data-bs-slide-to='" +
-          index +
-          "'></li>");
+        "<li data-bs-target='#heroCarousel' data-bs-slide-to='" +
+        index +
+        "'></li>");
   });
 
   // ----------------------------------------- //
   // Check if the user is logged in by checking if the "user" key exists in localStorage
-  const isLoggedIn = localStorage.getItem("user") ? true : false;
+  const currUser = JSON.parse(localStorage.getItem("user"));
+  if (currUser) {
+    // Define navigation items with title, link, and show properties
+    const NAV_ITEMS = [
+      {
+        title: "Home",
+        link: "index.html",
+        role: ['admin', 'user'],
+        show: true,
+      },
+      {
+        title: "Explore",
+        link: "explore.html",
+        role: ['admin', 'user'],
+        show: true,
+      },
+      {
+        title: "User Profile",
+        link: "user-profile.html",
+        role: ['admin', 'user'],
+        show: currUser?.id ? true : false, // Show only if the user is logged in
+      },
+      {
+        title: "Location Best Seller",
+        link: "best-sellers.html",
+        role: ['admin'],
+        show: currUser?.id ? true : false, // Show only if the user is logged in
+      },
+      {
+        title: "Logout",
+        link: "logout.html",
+        role: ['admin', 'user'],
+        show: currUser?.id ? true : false, // Show only if the user is logged in
+      },
+    ];
 
-  // Define navigation items with title, link, and show properties
-  const NAV_ITEMS = [
-    {
-      title: "Home",
-      link: "index.html",
-      show: true,
-    },
-    {
-      title: "Explore",
-      link: "explore.html",
-      show: true,
-    },
-    {
-      title: "User Profile",
-      link: "user-profile.html",
-      show: isLoggedIn, // Show only if the user is logged in
-    },
-    {
-      title: "Logout",
-      link: "logout.html",
-      show: isLoggedIn, // Show only if the user is logged in
-    },
-  ];
+    // Select the navigation items container in the HTML
+    const navigationItems = document.querySelector("#navbar ul");
 
-  // Select the navigation items container in the HTML
-  const navigationItems = document.querySelector("#navbar ul");
+    // Clear the existing content and create a new unordered list
+    navigationItems.innerHTML = "<ul></ul>";
 
-  // Clear the existing content and create a new unordered list
-  navigationItems.innerHTML = "<ul></ul>";
+    // Filter NAV_ITEMS on base of role
+    const FILTERED_NAV_ITEMS = NAV_ITEMS.filter(item => item.role.includes(currUser?.role));
 
-  // Iterate over each navigation item and create list items dynamically
-  NAV_ITEMS.forEach((item) => {
-    if (item.show) {
-      // Create a list item
-      const li = document.createElement("li");
+    // Iterate over each navigation item and create list items dynamically
+    FILTERED_NAV_ITEMS.forEach((item) => {
+      if (item.show) {
+        // Create a list item
+        const li = document.createElement("li");
 
-      // Set the inner HTML of the list item with a link
-      li.innerHTML = `<a href=${item.link} class=${
-        window.location.href.includes(item.link) ? "active" : ""
-      }> ${item.title} </a>`;
+        // Set the inner HTML of the list item with a link
+        li.innerHTML = `<a href=${item.link} class=${window.location.href.includes(item.link) ? "active" : ""
+          }> ${item.title} </a>`;
 
-      // Append the list item to the unordered list
-      navigationItems.appendChild(li);
-    }
-  });
-  
+        // Append the list item to the unordered list
+        navigationItems.appendChild(li);
+      }
+    });
+  }
+
 })();
