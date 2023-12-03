@@ -2354,3 +2354,14 @@ section {
   padding-block: 4px;
   margin-bottom: 0;
 }
+.book-image-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 200px;
+}
+.book-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}

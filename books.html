@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Login | Book Ratings</title>
+    <title>Books | Book Ratings</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -48,16 +48,7 @@
         </div>
 
         <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a
-                href="sign-up.html"
-                class="btn-get-started text-light text-center ml-sm-4 mx-1"
-                >Sign Up</a
-              >
-            </li>
-          </ul>
+          <ul></ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <!-- .navbar -->
@@ -65,50 +56,19 @@
     </header>
     <!-- End Header -->
 
-    <div class="container pt-1 animate__animated animate__fadeIn" style="min-height: calc(100vh - 151px);">
-      <div class="card m-sm-2 my-sm-5 mx-lg-5 my-5">
-        <div class="card-body">
-          <h3 class="title mb-3">Login</h3>
-          <form id="login_form">
-            <div class="row">
-              <div class="col-12 mb-1">
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    id="email"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                    required
-                  />
-                  <small id="emailHelp" class="form-text text-muted"
-                    >We'll never share your email with anyone else.</small
-                  >
-                </div>
-              </div>
-              <div class="col-12 mb-1">
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    minlength="6"
-                    id="password"
-                    name="password"
-                    aria-describedby="passwordHelp"
-                    placeholder="Password"
-                    required
-                  />
-                  <small id="passwordHelp" class="form-text text-muted"
-                    >Password must contain atleast 6 characters.</small
-                  >
-                </div>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
+    <div
+      class="container-fluid explore-page py-2"
+      style="min-height: calc(100vh - 151px)"
+    >
+      <div class="row mt-2">
+        <div class="col-12 d-flex justify-content-between">
+          <h2 class="title">Books</h2>
+          <button
+            class="btn btn-custom"
+            onclick="window.location.href='add-book.html'"
+          >
+            Add New Book
+          </button>
         </div>
       </div>
     </div>
@@ -130,6 +90,71 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <form id="new_review">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Edit Profile Info
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true" id="modal_close_btn">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    class="form-control"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    class="form-control"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Javascript Files -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -143,6 +168,6 @@
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/SignIn.js"></script>
+    <script src="assets/js/MyReviews.js"></script>
   </body>
 </html>

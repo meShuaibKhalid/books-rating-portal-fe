@@ -174,6 +174,8 @@
   // ----------------------------------------- //
   // Check if the user is logged in by checking if the "user" key exists in localStorage
   const currUser = JSON.parse(localStorage.getItem("user"));
+  const bestSellerCity = localStorage.getItem("best_seller_city");
+  if (!bestSellerCity && currUser) getUserCity();
   if (currUser) {
     // Define navigation items with title, link, and show properties
     const NAV_ITEMS = [
@@ -190,7 +192,19 @@
         show: true,
       },
       {
-        title: "User Profile",
+        title: "Add Book",
+        link: "books.html",
+        role: ['admin', 'user'],
+        show: currUser?.id ? true : false, // Show only if the user is logged in,
+      },
+      {
+        title: "My Reviews",
+        link: "my-reviews.html",
+        role: ['admin', 'user'],
+        show: currUser?.id ? true : false, // Show only if the user is logged in
+      },
+      {
+        title: "Profile",
         link: "user-profile.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in
@@ -234,4 +248,16 @@
     });
   }
 
+  async function getUserCity() {
+    try {
+      const response = await axios.get(`https://ipinfo.io/103.18.10.50?token=78b50100a80b1b`);
+      if (response.status === 200) {
+        localStorage.setItem("best_seller_city", response.data.city)
+      }
+
+    } catch (error) {
+      console.error("Error getting user city from IP:", error);
+    }
+    return null;
+  }
 })();
