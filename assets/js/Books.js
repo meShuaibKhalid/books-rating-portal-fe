@@ -6,6 +6,7 @@ const addBookForm = document.getElementById('add_book_form');
 const inputElements = [];
 const booksBaseUrl = 'http://localhost:3000/books/addBook';
 const uploadBaseUrl = 'http://localhost:3000/upload/book';
+const getbooksBaseUrl = 'http://localhost:3000/books/getBooks';
 let uploadedFile = null;
 const bookObject = {
     bookId: null,
@@ -69,4 +70,14 @@ async function UploadBookAvatar() {
     const formData = new FormData();
     formData.append('file', uploadedFile);
     await axios.post(`${uploadBaseUrl}/${bookID}`, formData);
+}
+
+async function getBooks() {
+    return new Promise(async (resolve) => {
+        const response = await axios.get(getbooksBaseUrl);
+        console.log(response);
+        if (response.status === 200) {
+            resolve(response.data)
+        }
+    })
 }
