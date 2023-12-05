@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Book Details | Book Ratings</title>
+    <title>Détails du livre | Évaluations de livres</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -49,14 +49,6 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a
-                href="sign-up.html"
-                class="btn-get-started text-light text-center ml-sm-4 mx-1"
-                >Sign Up</a
-              >
-            </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -78,28 +70,28 @@
           </div>
 
           <div class="col-md-8 mt-sm-0 mt-5">
-            <h2 class="mb-3">Book Details</h2>
+            <h2 class="mb-3">Détails du livre</h2>
 
             <div class="mb-3">
-              <strong>Title:</strong> <span id="title"></span>
+              <strong>Titre:</strong> <span id="title"></span>
             </div>
 
             <div class="mb-3">
-              <strong>Author:</strong> <span id="author"></span>
+              <strong>Nom de l'auteur:</strong> <span id="author"></span>
             </div>
 
             <div class="mb-3">
-              <strong>Abstract:</strong>
+              <strong>Résumé du livre:</strong>
               <span id="abstract"></span>
             </div>
 
             <div class="mb-3">
-              <strong>Publish Date:</strong>
+              <strong>Date de publication:</strong>
               <span id="publish_date"></span>
             </div>
 
             <div class="mb-3 d-flex align-items-center">
-              <strong>Rating:</strong>
+              <strong>Notes:</strong>
               <span id="rating" class="d-flex ml-2">
                 <i class="bi bi-star-fill d-flex mx-1"></i>
                 <i class="bi bi-star-fill d-flex mx-1"></i>
@@ -112,12 +104,12 @@
         </div>
 
         <div class="mt-5">
-          <h2>User Reviews</h2>
+          <h2>Critiques d'utilisateurs</h2>
 
           <!-- Add Review Form -->
           <form id="reviewForm" class="mb-3">
             <div class="mb-3">
-              <label for="reviewText">Your Review:</label>
+              <label for="reviewText">Votre avis:</label>
               <textarea
                 class="form-control"
                 id="title"
@@ -127,18 +119,18 @@
             </div>
 
             <div class="mb-3">
-              <label for="reviewRating">Your Rating:</label>
+              <label for="reviewRating">Votre note:</label>
               <select class="form-select" name="rating" id="reviewRating">
-                <option value="1">1 Star</option>
-                <option value="2">2 Stars</option>
-                <option value="3">3 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="5">5 Stars</option>
+                <option value="1">1 étoile</option>
+                <option value="2">2 étoiles</option>
+                <option value="3">3 étoiles</option>
+                <option value="4">4 étoiles</option>
+                <option value="5">5 étoiles</option>
               </select>
             </div>
 
             <button type="submit" class="btn btn-primary">
-              Add Review
+              Ajouter un commentaire
             </button>
           </form>
 
@@ -154,8 +146,8 @@
     <footer id="footer">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Book Ratings System</span></strong
-          >. All Rights Reserved
+          &copy; droits d'auteur <strong><span>Système de notation des livres</span></strong
+          >. Tous droits réservés
         </div>
       </div>
     </footer>

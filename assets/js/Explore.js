@@ -43,12 +43,12 @@ function getBestSellers(city) {
                     ${r.title}
                     </h5>
                     <h6 class="card-subtitle my-1" title="${r.title}">
-                    Author: <span class='text-muted'>${r.author}</span>
+                    Nom de l'auteur: <span class='text-muted'>${r.author}</span>
                     </h6>
                     <p class="card-text mb-0">
                     ${r.abstract}
                     </p>
-                    <a class="card-link">View Details</a>
+                    <a class="card-link">Voir les détails</a>
                 </div>
                 </div>
             </div>`;
@@ -80,12 +80,12 @@ function getBooks() {
                     ${r.title}
                     </h5>
                     <h6 class="card-subtitle my-1" title="${r.title}">
-                    Author: <span class='text-muted'>${r.author}</span>
+                    Nom de l'auteur: <span class='text-muted'>${r.author}</span>
                     </h6>
                     <p class="card-text mb-0">
                     ${r.abstract}
                     </p>
-                    <a class="card-link">View Details</a>
+                    <a class="card-link">Voir les détails</a>
                 </div>
                 </div>
             </div>`;

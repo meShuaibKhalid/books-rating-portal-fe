@@ -37,7 +37,7 @@ function getReviews() {
                     <div class="col-md-8 px-1">
                       <div class="card-body px-4 px-sm-0">
                         <h5 class="card-title">${review?.book_name}</h5>
-                        <p class="card-text">Author: ${review?.user_name}</p>
+                        <p class="card-text">Auteure/Auteur: ${review?.user_name}</p>
                         <div>
                          ${starIcons}
                         </div>

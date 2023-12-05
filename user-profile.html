@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>User Profile | Book Ratings</title>
+    <title>Profil de l'utilisateur | Évaluations de livres</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -49,7 +49,6 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a href="index.html">Home</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -89,8 +88,8 @@
                             <i class="bi bi-camera"></i>
                           </div>
                           <div class="text-uppercase">
-                            Update <br />
-                            Profile Photo
+                             
+                            Mettre à jour <br /> la photo de profil
                           </div>
                         </div>
                         <label for="delete" id="upload-file-delete"> X </label>
@@ -109,23 +108,23 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Full Name</h6>
+                    <h6 class="mb-0">Nom et prénom</h6>
                   </div>
                   <div class="col-sm-9 text-secondary" id="username"></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Email</h6>
+                    <h6 class="mb-0">Adresse e-mail</h6>
                   </div>
                   <div class="col-sm-9 text-secondary" id="email"></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Address</h6>
+                    <h6 class="mb-0">Adresse</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary" id="address">new st</div>
+                  <div class="col-sm-9 text-secondary" id="address"></div>
                 </div>
                 <hr />
                 <div class="row">
@@ -134,7 +133,7 @@
                       class="btn btn-custom"
                       data-toggle="modal"
                       data-target="#exampleModal"
-                      >Edit</a
+                      >Modifier</a
                     >
                   </div>
                 </div>
@@ -149,8 +148,8 @@
     <footer id="footer">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Book Ratings System</span></strong
-          >. All Rights Reserved
+          &copy; droits d'auteur <strong><span>Système de notation des livres</span></strong
+          >. Tous droits réservés
         </div>
       </div>
     </footer>
@@ -175,7 +174,7 @@
           <form id="user_profile_modal_form">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Edit Profile Info
+                Modifier les informations du profil
               </h5>
               <button
                 type="button"
@@ -189,52 +188,52 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="firstName">First Name</label>
+                  <label for="firstName">Prénom</label>
                   <input
                     type="text"
                     name="firstName"
                     class="form-control"
-                    placeholder="First name"
+                    placeholder="Prénom"
                     required
                   />
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="lastName">Last Name</label>
+                  <label for="lastName">Nom de famille</label>
                   <input
                     type="text"
                     name="lastName"
                     class="form-control"
-                    placeholder="Last name"
+                    placeholder="Nom de famille"
                     required
                   />
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email">Adresse e-mail</label>
                     <input
                       type="email"
                       name="email"
                       class="form-control"
                       id="email"
                       aria-describedby="emailHelp"
-                      placeholder="Enter email"
+                      placeholder="Adresse e-mail"
                       required
                       readonly
                     />
                     <small id="emailHelp" class="form-text text-muted"
-                      >Email can't be edited.</small
+                      >L'e-mail ne peut pas être modifié.</small
                     >
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-group">
-                    <label for="address">Address</label>
+                    <label for="address">Adresse de l'utilisateur</label>
                     <input
                       type="text"
                       class="form-control"
                       id="address"
                       name="address"
-                      placeholder="1234 Main St"
+                      placeholder="1234, rue Principale"
                     />
                   </div>
                 </div>
@@ -246,10 +245,10 @@
                 class="btn btn-secondary"
                 data-dismiss="modal"
               >
-                Close
+              Fermer
               </button>
               <button type="submit" class="btn btn-primary">
-                Save changes
+                Sauvegarder les modifications
               </button>
             </div>
           </form>

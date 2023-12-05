@@ -180,43 +180,43 @@
     // Define navigation items with title, link, and show properties
     const NAV_ITEMS = [
       {
-        title: "Home",
+        title: "Page d'accueil",
         link: "index.html",
         role: ['admin', 'user'],
         show: true,
       },
       {
-        title: "Explore Books",
+        title: "Explorer les livres",
         link: "explore.html",
         role: ['admin', 'user'],
         show: true,
       },
       {
-        title: "My Book",
+        title: "Mon livre",
         link: "books.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in,
       },
       {
-        title: "My Reviews",
+        title: "Mes avis",
         link: "my-reviews.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in
       },
       {
-        title: "Profile",
+        title: "Profil",
         link: "user-profile.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in
       },
       {
-        title: "Location Best Seller",
+        title: "Localisation Best-seller",
         link: "best-sellers.html",
         role: ['admin'],
         show: currUser?.id ? true : false, // Show only if the user is logged in
       },
       {
-        title: "Logout",
+        title: "Se déconnecter",
         link: "logout.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in
