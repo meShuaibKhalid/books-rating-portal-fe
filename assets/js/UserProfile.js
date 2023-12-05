@@ -71,7 +71,6 @@ if (userForm) {
             populateUserProfile();
             document.querySelector('#modal_close_btn').click();
         } catch (error) {
-            console.log("error: ", error);
             alert("Error Logging In. Please try again");
         }
     });

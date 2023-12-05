@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Books | Book Ratings</title>
+    <title>Best Seller | Book Ratings</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -89,7 +89,8 @@
 
                     <button
                       class="w-100 btn btn-primary ml-2 d-flex align-items-center justify-content-center"
-                      id="scan_image"  title="Scan will only work for smartphones"
+                      id="scan_image"
+                      title="Scan will only work for smartphones"
                     >
                       <input
                         type="file"
@@ -112,12 +113,12 @@
                 <form id="add_book_form">
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="title">Title</label>
+                      <label for="title"> Best Seller Title</label>
                       <input
                         type="text"
                         name="title"
                         class="form-control"
-                        placeholder="Book Title"
+                        placeholder="Best Seller Title"
                         required
                       />
                     </div>
@@ -131,6 +132,19 @@
                         required
                       />
                     </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                          <label for="location">City</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="location"
+                            name="location"
+                            placeholder="Best Seller City"
+                          />
+                        </div>
+                      </div>
 
                     <div class="col-12">
                       <div class="form-group">
@@ -174,32 +188,10 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-custom">Add Book</button>
+                      <button class="btn btn-custom">Add Best Seller</button>
                     </div>
 
-                    <!-- <div class="col-12">
-                    <div class="form-group">
-                      <label for="location">Location</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="location"
-                        name="location"
-                        placeholder="Book Location"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="isLocationBestSeller">Is Location Best Seller</label>
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="isLocationBestSeller"
-                        name="isLocationBestSeller"
-                      />
-                    </div>
-                  </div> -->
+                    
                   </div>
                 </form>
               </div>
@@ -241,6 +233,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/Books.js"></script>
+    <script src="assets/js/AddBestSeller.js"></script>
   </body>
 </html>

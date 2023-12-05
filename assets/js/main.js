@@ -186,13 +186,13 @@
         show: true,
       },
       {
-        title: "Explore",
+        title: "Explore Books",
         link: "explore.html",
         role: ['admin', 'user'],
         show: true,
       },
       {
-        title: "Add Book",
+        title: "My Book",
         link: "books.html",
         role: ['admin', 'user'],
         show: currUser?.id ? true : false, // Show only if the user is logged in,
@@ -260,4 +260,11 @@
     }
     return null;
   }
+
+
 })();
+function toTitleCase(str) {
+  return str.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  });
+}
